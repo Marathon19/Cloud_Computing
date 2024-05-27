@@ -24,7 +24,7 @@ def find_passenger_with_most_flights(passenger_flights):
     return max_passenger, max_flights
 
 if __name__ == '__main__':
-    data_files = ['AComp_Passenger_data_no_error.csv'] # 添加更多文件
+    data_files = ['data/AComp_Passenger_data_no_error.csv'] # 添加更多文件
 
     pool = Pool(processes=len(data_files))
     results = pool.map(map_passenger_flights, data_files)
@@ -35,4 +35,4 @@ if __name__ == '__main__':
 
     max_passenger, max_flights = find_passenger_with_most_flights(total_passenger_flights)
 
-    print(f"拥有最多航班的乘客ID为 {max_passenger}，航班数量为: {max_flights}")
+    print(f"The passenger ID with the most flights is: {max_passenger}，The number of flights is: {max_flights}")

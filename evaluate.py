@@ -36,7 +36,7 @@ def process_data():
     # 为每个文件单独找到拥有最多航班的乘客
     for i, file_flights in enumerate(results):
         file_max_passenger, file_max_flights = find_max_passenger(file_flights)
-        print(f"文件 {data_files[i]} 中拥有最多航班的乘客ID为 {file_max_passenger}，航班数量为: {file_max_flights}")
+        print(f"The passenger ID with the most flights in file {data_files[i]} is {file_max_passenger}, and the number of flights is: {file_max_flights}.")
 
 if __name__ == '__main__':
     process_data()
